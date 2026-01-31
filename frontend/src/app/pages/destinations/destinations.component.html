@@ -1,0 +1,16 @@
+<h2>Destinations</h2>
+
+<p *ngIf="loading">Loading...</p>
+
+<div *ngIf="!loading && destinations.length === 0">
+  No destinations found
+</div>
+
+<div *ngIf="!loading && destinations.length > 0" class="grid">
+  <div class="card" *ngFor="let d of destinations">
+    <img [src]="d.flagUrl" alt="flag" />
+    <h3>{{ d.countryName }}</h3>
+    <p>{{ d.capital }} - {{ d.region }}</p>
+    <p>{{ d.currencyName }} ({{ d.currencyCode }})</p>
+  </div>
+</div>
