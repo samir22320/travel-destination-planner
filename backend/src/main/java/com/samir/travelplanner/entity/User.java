@@ -23,11 +23,11 @@ public class User {
     @NotBlank(message = "Name is required")
     private String username;
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 255)
     @NotBlank(message = "password is required")
     private String password;
 
-    @Column(nullable = false, length = 5)
+    @Column(nullable = false, length = 40)
     @NotBlank(message = "Role is required")
     private String role;
 
